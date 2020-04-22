@@ -13,13 +13,13 @@ list* of the stack variables used either *by value* (sometimes called
 "*by copy*" instead) or *by reference* within the body of the lambda.
 Here is the lambda expression syntax:
 
-&nbsp;&nbsp;&nbsp;&nbsp; `[` *capture-list* `] (` *paramter-list* `) -> ` *return-type* `{` *body* `}`
+&nbsp;&nbsp;&nbsp;&nbsp; `[` *capture-list* `] (` *parameter-list* `) -> ` *return-type* `{` *body* `}`
 
 If the body changes the variable and objects it captures then
 (apparently) it needs to include the `mutable` keyword, like
 so:
 
-&nbsp;&nbsp;&nbsp;&nbsp; `[` *capture-list* `] (` *paramter-list* `) mutable -> ` *return-type* `{` *body* `}`
+&nbsp;&nbsp;&nbsp;&nbsp; `[` *capture-list* `] (` *parameter-list* `) mutable -> ` *return-type* `{` *body* `}`
 
 The `samples` folder contains code examples that I used in my slides.
 
