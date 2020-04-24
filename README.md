@@ -15,11 +15,13 @@ Here is the lambda expression syntax:
 
 &nbsp;&nbsp;&nbsp;&nbsp; `[` *capture-list* `] (` *parameter-list* `) -> ` *return-type* `{` *body* `}`
 
-If the body changes the variable and objects it captures then
-(apparently) it needs to include the `mutable` keyword, like
+The `samples` folder contains code examples that I used in my slides.
+
+Incidentally, if the body changes any variables or objects that it captures *by value*
+(if they are *copy captures*) then it needs to include the `mutable` keyword, like
 so:
 
 &nbsp;&nbsp;&nbsp;&nbsp; `[` *capture-list* `] (` *parameter-list* `) mutable -> ` *return-type* `{` *body* `}`
 
-The `samples` folder contains code examples that I used in my slides.
+This makes the "lambda" or "closure" have some hidden state, and its `operation()` will no longer be a `const` method.
 
